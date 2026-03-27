@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="192" height="192">
+  <!-- Background - Earth/Brown -->
+  <rect width="512" height="512" fill="#1A0E05"/>
+  
+  <!-- Arena circle (dirt pit) -->
+  <circle cx="256" cy="280" r="140" fill="#3D2317" stroke="#5C3A28" stroke-width="6"/>
+  
+  <!-- Hole circles inside arena -->
+  <circle cx="256" cy="220" r="25" fill="#2D1810" stroke="#5C3A28" stroke-width="4"/>
+  <circle cx="210" cy="250" r="25" fill="#2D1810" stroke="#5C3A28" stroke-width="4"/>
+  <circle cx="302" cy="250" r="25" fill="#2D1810" stroke="#5C3A28" stroke-width="4"/>
+  <circle cx="210" cy="310" r="25" fill="#2D1810" stroke="#5C3A28" stroke-width="4"/>
+  <circle cx="302" cy="310" r="25" fill="#2D1810" stroke="#5C3A28" stroke-width="4"/>
+  <circle cx="256" cy="340" r="25" fill="#2D1810" stroke="#5C3A28" stroke-width="4"/>
+  
+  <!-- Stones in holes (white/cream) -->
+  <circle cx="256" cy="220" r="12" fill="#E8D5B7"/>
+  <circle cx="210" cy="250" r="12" fill="#E8D5B7"/>
+  <circle cx="302" cy="250" r="12" fill="#E8D5B7"/>
+  
+  <!-- Gho (throwing stone) in motion -->
+  <circle cx="256" cy="140" r="18" fill="#FFD700" stroke="#B8860B" stroke-width="3">
+    <animate attributeName="cy" values="140;120;140" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Motion trail for gho -->
+  <ellipse cx="256" cy="130" rx="8" ry="4" fill="#FFD700" opacity="0.4"/>
+  
+  <!-- Score markers / decorative elements -->
+  <circle cx="180" cy="180" r="8" fill="#8B4513"/>
+  <circle cx="332" cy="180" r="8" fill="#8B4513"/>
+  
+  <!-- Title accent -->
+  <text x="256" y="100" text-anchor="middle" fill="#E8D5B7" font-size="24" font-weight="bold" font-family="Arial, sans-serif">DIKETO</text>
+</svg>
