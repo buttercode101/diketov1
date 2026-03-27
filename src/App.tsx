@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Volume2, VolumeX, Trophy, Play, RotateCcw, Home, Settings, Sparkles, ShoppingCart, BookOpen, HelpCircle } from 'lucide-react';
+import { Volume2, VolumeX, Trophy, Play, RotateCcw, Home, Settings, Sparkles, ShoppingCart, BookOpen, HelpCircle, Info } from 'lucide-react';
 import { useAudio, useLocalStorage, useArenaMeasurement, useStatistics, useAchievements, useDailyRewards, useCosmetics, useHaptics } from './hooks';
 import { LEVELS, COSMETICS, PALETTE, ORGANIC_SHAPES, GAME_TIMING, STORAGE_KEYS, VIBRATION, ACHIEVEMENTS, BOARD_THEMES, TUTORIAL_STEPS, CULTURAL_INFO, DIFFICULTY_SETTINGS } from './constants';
 import { Phase, Mode, Stone, Particle, TutorialState, Achievement, Cosmetic, BoardTheme } from './types';
+import { PremiumButton, GlassCard, Modal, StatCard, AchievementCard, Toggle, Badge } from './components/UIComponents';
 
 export default function App() {
   const [phase, setPhase] = useState<Phase>('MENU');
