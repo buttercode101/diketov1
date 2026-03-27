@@ -688,28 +688,28 @@ export default function App() {
 
   // Render Game
   return (
-    <div className="max-w-md mx-auto h-full flex flex-col font-sans select-none relative bg-[#1A0E05] overflow-hidden">
+    <div className="fixed inset-0 max-w-md mx-auto h-full flex flex-col font-sans select-none relative bg-[#1A0E05] overflow-hidden safe-container">
       {/* HUD */}
-      <div className="relative z-20 flex justify-between items-center p-6">
+      <div className="relative z-20 flex justify-between items-center p-4 md:p-6 safe-top">
         <div className="flex flex-col gap-1">
           <div className="text-[10px] font-bold tracking-widest text-[#D4B483]/60 uppercase">{level.label}</div>
-          <div className="text-xl font-black tracking-tighter text-white">{playerScore}</div>
-          {combo > 1 && <div className="text-sm font-bold text-[#f27696] animate-pulse">{combo}x COMBO!</div>}
+          <div className="text-xl md:text-2xl font-black tracking-tighter text-white">{playerScore}</div>
+          {combo > 1 && <div className="text-xs md:text-sm font-bold text-[#f27696] animate-pulse">{combo}x COMBO!</div>}
         </div>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4 md:gap-6">
           <div className="flex gap-1.5">
             {Array.from({ length: 3 }).map((_, i) => (
-              <div key={i} className={`w-3 h-3 rounded-full ${i < lives ? 'bg-[#FFD700]' : 'bg-white/10'}`} />
+              <div key={i} className={`w-2.5 h-2.5 md:w-3 md:h-3 rounded-full ${i < lives ? 'bg-[#FFD700]' : 'bg-white/10'}`} />
             ))}
           </div>
-          <button onClick={quitToMenu} className="p-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10">
+          <button onClick={quitToMenu} className="p-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition-all">
             <RotateCcw size={18} className="text-white" />
           </button>
         </div>
       </div>
 
       {/* Arena */}
-      <div ref={arenaRef} className="flex-1 relative z-10 touch-none">
+      <div ref={arenaRef} className="flex-1 relative z-10 touch-none w-full h-full min-h-0">
         {/* Hole */}
         <div className="absolute rounded-full" style={{
           left: holePos.x - 55, top: holePos.y - 55, width: 110, height: 110,
